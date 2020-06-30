@@ -44,7 +44,7 @@ def main():
     ratio, ratio_se = get_ratio(chisq, seg)
    
     # print out result
-    print(argmap['tissue'], rankr, rankr_se)
+    print(argmap['tissue'], ratio, ratio_se)
 
 # get rankr and se
 def get_ratio(chisq, seg):
@@ -60,12 +60,12 @@ def get_ratio(chisq, seg):
     for blk in blocks:
         chisq_blk = np.delete(chisq, blk)
         seg_blk = np.delete(seg, blk)
-        ps_rankr.append(np.mean(chisq_blk[seg_blk==1.0]) / np.mean(chisq_blk))
-    ps_rankr = np.array(ps_rankr)
+        ps_ratio.append(np.mean(chisq_blk[seg_blk==1.0]) / np.mean(chisq_blk))
+    ps_ratio = np.array(ps_ratio)
 
     # get standard error
-    mean_ps_rankr = np.mean(ps_rankr, axis=0)
-    diffsq = np.square(ps_rankr - mean_ps_rankr)
+    mean_ps_ratio = np.mean(ps_ratio, axis=0)
+    diffsq = np.square(ps_ratio - mean_ps_ratio)
     ratio_se = np.sqrt((nblock-1)*np.mean(diffsq, axis=0)) 
 
     return ratio, ratio_se

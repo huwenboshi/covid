@@ -1,1 +1,1 @@
-# covid_ldsc
+# covid
