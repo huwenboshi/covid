@@ -31,25 +31,31 @@ ambiguous = set(["AT", "CG", "TA", "GC"])
 # load legend
 legend_fnm = sys.argv[1]
 legend = pd.read_csv(legend_fnm, header=None, delim_whitespace=True)
-legend.columns = ['CHR', 'SNP', 'CM', 'BP_ref', 'A2_ref', 'A1_ref']
+legend.columns = ['CHR', 'SNP', 'CM', 'BP', 'A2_ref', 'A1_ref']
 
 # filter legend
 legend.drop_duplicates(subset='SNP', keep=False, inplace=True)
-legend.drop_duplicates(subset='BP_ref', keep=False, inplace=True)
+legend.drop_duplicates(subset='BP', keep=False, inplace=True)
 legend.reset_index(drop=True, inplace=True)
 
 # load sumstats
 sumstats_fnm = sys.argv[2]
 sumstats = pd.read_csv(sumstats_fnm, delim_whitespace=True)
+sumstats.rename(columns={'#CHR': 'CHR', 'POS': 'BP'}, inplace=True)
+
+# get z-score
+sumstats['Z'] = sumstats['all_inv_var_meta_beta'] / sumstats['all_inv_var_meta_sebeta']
 
 # merge sumstats and legend
-sumstats = sumstats.merge(legend, on=['SNP'])
+sumstats = sumstats.merge(legend, on=['CHR', 'BP'])
+sumstats.sort_values(by=['CHR', 'BP'], inplace=True)
 
 # filter and flip alleles
 nsnp = sumstats.shape[0]
 
-ss_Z = sumstats['Z'].values; ss_beta = sumstats['BETA'].values
-ss_A1 = sumstats['A1'].values; ss_A2 = sumstats['A2'].values
+ss_BP = sumstats['BP'].values
+ss_Z = sumstats['Z'].values; ss_beta = sumstats['all_inv_var_meta_beta'].values
+ss_A1 = sumstats['ALT'].values; ss_A2 = sumstats['REF'].values
 
 ref_BP = sumstats['BP'].values
 ref_A1 = sumstats['A1_ref'].values; ref_A2 = sumstats['A2_ref'].values
@@ -59,6 +65,11 @@ for idx in range(nsnp):
 
     # not bi-allelic
     if len(ss_A1[idx]) > 1 or len(ss_A2[idx]) > 1:
+        drop_idx.append(idx)
+        continue
+
+    # different BP
+    if ss_BP[idx] != ref_BP[idx]:
         drop_idx.append(idx)
         continue
 
@@ -74,6 +85,7 @@ for idx in range(nsnp):
     # equivalent
     if ss_alleles in equiv[ref_alleles]:
         ss_A1[idx] = ref_A1[idx]
+        ss_A2[idx] = ref_A2[idx]
         continue
 
     # reversed
@@ -86,7 +98,15 @@ for idx in range(nsnp):
 
 sumstats.drop(drop_idx, inplace=True)
 
+# get sample size
+tot_ncase = 3199.0
+tot_nctrl = 897488.0
+tot_n = 4.0 / (1.0/tot_ncase + 1.0/tot_nctrl)
+
+sumstats['N'] = tot_n
+
 # save to file
-sumstats = sumstats[['SNP', 'CHR_y', 'BP_ref', 'A1', 'A2', 'Z', 'N', 'BETA', 'SE']]
+sumstats = sumstats[['SNP_y', 'CHR', 'BP', 'ALT', 'REF', 'Z', 'N',
+                     'all_inv_var_meta_beta', 'all_inv_var_meta_sebeta']]
 sumstats.columns = ['SNP', 'CHR', 'BP', 'A1', 'A2', 'Z', 'N', 'BETA', 'SE']
 sumstats.to_csv(sys.argv[3], sep='\t', index=False)
