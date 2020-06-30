@@ -35,7 +35,12 @@ def main():
     
     # get rankr and se
     chisq = sumstat_annot['CHISQ'].values
-    seg = sumstat_annot['{}.bed'.format(argmap['tissue'])].values
+    annot_col = ''
+    for s in sumstat_annot.columns:
+        if s.find('bed') != -1:
+            annot_col = s
+            break
+    seg = sumstat_annot[annot_col].values
     rankr, rankr_se = cor_chisq_seg(chisq, seg)
    
     # print out result
@@ -68,11 +73,12 @@ def cor_chisq_seg(chisq, seg):
 # load annotation
 def load_annot(prefix, start_chrom, end_chrom):
 
-    annot = pd.DataFrame()
+    annot_chrom = []
     for i in range(start_chrom, end_chrom+1):
         filename = '{}{}.annot.gz'.format(prefix, i)
-        tmp = pd.read_table(filename, delim_whitespace=True)
-        annot = pd.concat([annot, tmp], ignore_index=True)
+        annot_chrom.append(pd.read_table(filename, delim_whitespace=True))
+
+    annot = pd.concat(annot_chrom, ignore_index=True)
 
     return annot
 
