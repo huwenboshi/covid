@@ -36,8 +36,34 @@ def main():
     # get rankr and se
     chisq = sumstat_annot['CHISQ'].values
     seg = sumstat_annot['{}.bed'.format(argmap['tissue'])].values
+    rankr, rankr_se = cor_chisq_seg(chisq, seg)
+   
+    # print out result
+    print(argmap['tissue'], rankr, rankr_se)
 
-# get 
+# get rankr and se
+def cor_chisq_seg(chisq, seg):
+
+    # get overall estimate
+    rankr = stats.spearmanr(chisq, seg)[0]
+
+    # get jackknife pseudo values
+    nsnp = chisq.shape[0]
+    nblock = 200
+    ps_rankr = []
+    blocks = create_block(0, nsnp-1, nblock)
+    for blk in blocks:
+        chisq_blk = np.delete(chisq, blk)
+        seg_blk = np.delete(seg, blk)
+        ps_rankr.append(stats.spearmanr(chisq_blk, seg_blk)[0])
+    ps_rankr = np.array(ps_rankr)
+
+    # get standard error
+    mean_ps_rankr = np.mean(ps_rankr, axis=0)
+    diffsq = np.square(ps_rankr - mean_ps_rankr)
+    rankr_se = np.sqrt((nblock-1)*np.mean(diffsq, axis=0)) 
+
+    return rankr, rankr_se
 
 # load annotation
 def load_annot(prefix, start_chrom, end_chrom):
