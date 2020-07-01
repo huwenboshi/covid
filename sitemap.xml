@@ -3,5 +3,9 @@
      <loc>https://huwenboshi.github.io/covid/</loc>
      <lastmod>2020-07-01</lastmod>
      <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://huwenboshi.github.io/covid/basic/</loc>
+     <lastmod>2020-07-01</lastmod>
+     <changefreq>daily</changefreq>
     </url>
 </urlset>
