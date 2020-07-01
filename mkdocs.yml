@@ -1,0 +1,48 @@
+# Project information
+site_name: 'COVID'
+site_description: 'Analysis of COVID-19 GWAS summary association statistics data'
+site_author: 'Huwenbo Shi'
+site_url: 'https://huwenboshi.github.io/covid'
+
+# Repository
+repo_url: null
+
+# Copyright
+copyright: 'Copyright &copy; 2020 - 2025 Huwenbo Shi'
+
+# Documentation and theme
+theme: 'mkdocs'
+
+# define pages
+pages:
+    - Home: 'index.md'
+
+# Options
+extra:
+  palette:
+    primary: 'indigo'
+    accent: 'indigo'
+  font:
+    text: 'Roboto'
+    code: 'Roboto Mono'
+  social:
+    - type: 'github'
+      link: 'https://github.com/huwenboshi'
+    - type: 'twitter'
+      link: 'https://twitter.com/shihuwenbo'
+
+# Google Analytics
+google_analytics:
+  - 'UA-XXXXXXXX-X'
+  - 'auto'
+
+# Extensions
+markdown_extensions:
+  - mdx_math
+  - admonition
+  - codehilite
+  - toc
+
+extra_javascript:
+  - https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML
+  - assets/mathjaxhelper.js
