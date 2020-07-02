@@ -1,0 +1,29 @@
+# Trans-ethnic analysis of significant COVID-19 GWAS associations
+
+## Summary
+Here, I look at the allele frequencies of the genetic variants potentially
+associated (\\( p < 10^{-5}\\) ) with COVID-19 in diverse populations,
+to assess the likelihood that the same genetic associations can be
+reproduced in different populations.
+
+## Results
+
+## Methods
+I downloaded 6 versions of COVID-19 GWAS summary statistics data from
+[COVID-19 Host Genetics Initiative](https://www.covid19hg.org/).
+
+* `ANA_A2_V2`: very severe respiratory confirmed covid vs. population
+* `ANA_B1_V2`: hospitalized covid vs. not hospitalized covid
+* `ANA_B2_V2`: hospitalized covid vs. population
+* `ANA_C1_V2`: covid vs. lab/self-reported negative
+* `ANA_C2_V2`: covid vs. population
+* `ANA_D1_V2`: predicted covid from self-reported symptoms vs. predicted or self-reported non-covid
+
+I used 1000 Genomes Reference panel to obtain allele frequencies in 5 different
+populations.
+
+* `AFR`: African
+* `AMR`: Admixed American
+* `EAS`: East Asian
+* `EUR`: European
+* `SAS`: South Asian

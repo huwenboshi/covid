@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="Huwenbo Shi">
-        <link rel="canonical" href="https://huwenboshi.github.io/covid/basic/">
+        <link rel="canonical" href="https://huwenboshi.github.io/covid/trans-ethnic/">
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Basic Analysis - COVID</title>
+        <title>Trans-ethnic - COVID</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -46,7 +46,7 @@
                                 <a href=".." class="nav-link">Home</a>
                             </li>
                             <li class="navitem active">
-                                <a href="./" class="nav-link">Basic Analysis</a>
+                                <a href="./" class="nav-link">Trans-ethnic</a>
                             </li>
                         </ul>
 
@@ -83,12 +83,55 @@
     
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#trans-ethnic-analysis-of-significant-covid-19-gwas-associations" class="nav-link">Trans-ethnic analysis of significant COVID-19 GWAS associations</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#summary" class="nav-link">Summary</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#results" class="nav-link">Results</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#methods" class="nav-link">Methods</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
         </ul>
     </div>
 </div></div>
                     <div class="col-md-9" role="main">
 
-</div>
+<h1 id="trans-ethnic-analysis-of-significant-covid-19-gwas-associations">Trans-ethnic analysis of significant COVID-19 GWAS associations</h1>
+<h2 id="summary">Summary</h2>
+<p>Here, I look at the allele frequencies of the genetic variants potentially
+associated (\( p &lt; 10^{-5}\) ) with COVID-19 in diverse populations,
+to assess the likelihood that the same genetic associations can be
+reproduced in different populations.</p>
+<h2 id="results">Results</h2>
+<h2 id="methods">Methods</h2>
+<p>I downloaded 6 versions of COVID-19 GWAS summary statistics data from
+<a href="https://www.covid19hg.org/">COVID-19 Host Genetics Initiative</a>.</p>
+<ul>
+<li><code>ANA_A2_V2</code>: very severe respiratory confirmed covid vs. population</li>
+<li><code>ANA_B1_V2</code>: hospitalized covid vs. not hospitalized covid</li>
+<li><code>ANA_B2_V2</code>: hospitalized covid vs. population</li>
+<li><code>ANA_C1_V2</code>: covid vs. lab/self-reported negative</li>
+<li><code>ANA_C2_V2</code>: covid vs. population</li>
+<li><code>ANA_D1_V2</code>: predicted covid from self-reported symptoms vs. predicted or self-reported non-covid</li>
+</ul>
+<p>I used 1000 Genomes Reference panel to obtain allele frequencies in 5 different
+populations.</p>
+<ul>
+<li><code>AFR</code>: African</li>
+<li><code>AMR</code>: Admixed American</li>
+<li><code>EAS</code>: East Asian</li>
+<li><code>EUR</code>: European</li>
+<li><code>SAS</code>: South Asian</li>
+</ul></div>
             </div>
         </div>
 

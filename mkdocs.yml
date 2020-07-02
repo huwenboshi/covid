@@ -16,7 +16,7 @@ theme: 'mkdocs'
 # define pages
 pages:
     - Home: 'index.md'
-    - Basic Analysis: 'basic.md'
+    - Trans-ethnic: 'trans-ethnic.md'
 
 # Options
 extra:
