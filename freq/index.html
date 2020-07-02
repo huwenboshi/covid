@@ -91,7 +91,27 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#results" class="nav-link">Results</a>
+            <li class="nav-item" data-level="2"><a href="#analysis-of-ana_a2_v2" class="nav-link">Analysis of ANA_A2_V2</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#analysis-of-ana_b1_v2" class="nav-link">Analysis of ANA_B1_V2</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#analysis-of-ana_b2_v2" class="nav-link">Analysis of ANA_B2_V2</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#analysis-of-ana_c1_v2" class="nav-link">Analysis of ANA_C1_V2</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#analysis-of-ana_c2_v2" class="nav-link">Analysis of ANA_C2_V2</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#analysis-of-ana_d1_v2" class="nav-link">Analysis of ANA_D1_V2</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -113,73 +133,776 @@ associated (\( p &lt; 5 \times 10^{-8}\) ) with COVID-19 in diverse populations,
 to assess the potential of replicability of the association in different
 populations. Please note that additional allele frequency information is
 also available in the published GWAS summary statistics data files.</p>
-<h2 id="results">Results</h2>
-<p>Here, the <code>A1</code> allele is the risk increasing allele.</p>
-<details><summary>Analysis of ANA_A2_V2
-(very severe respiratory confirmed covid vs. population)</summary>
-<p>
-
-|    | SNP         |   CHR |        BP | A1   | A2   |     BETA |       SE |         P |   AFR_A1_FREQ |   AMR_A1_FREQ |   EAS_A1_FREQ |   EUR_A1_FREQ |   SAS_A1_FREQ |
-|---:|:------------|------:|----------:|:-----|:-----|---------:|---------:|----------:|--------------:|--------------:|--------------:|--------------:|--------------:|
-|  0 | rs6674373   |     1 |   1233112 | T    | C    |  1.5493  | 0.34905  | 9.056e-06 |  nan          |  nan          |  nan          |  nan          |  nan          |
-|  1 | rs150612978 |     1 | 186250988 | C    | T    |  2.7079  | 0.59303  | 4.967e-06 |    0          |    0.198847   |    0          |    0.00596421 |    0          |
-|  2 | rs597593    |     2 |  33660211 | G    | A    |  0.47857 | 0.10563  | 5.876e-06 |    0.579425   |    0.432277   |    0.115079   |    0.250497   |    0.229039   |
-|  3 | rs604788    |     2 |  33664350 | T    | C    |  0.48213 | 0.10841  | 8.697e-06 |    0.635401   |    0.409222   |    0.0992063  |    0.262425   |    0.224949   |
-|  4 | rs71424939  |     2 | 237819380 | C    | T    |  0.3636  | 0.081964 | 9.161e-06 |    0.273828   |    0.610951   |    0.543651   |    0.572565   |    0.519427   |
-|  5 | rs1396818   |     4 |  58695149 | C    | T    |  0.3992  | 0.087297 | 4.81e-06  |    0.177005   |    0.201729   |    0.787698   |    0.365805   |    0.429448   |
-|  6 | rs10011661  |     4 |  58698487 | C    | T    |  0.41532 | 0.08878  | 2.896e-06 |    0.143722   |    0.213256   |    0.78373    |    0.363817   |    0.406953   |
-|  7 | rs3899861   |     4 |  58699137 | A    | G    |  0.42367 | 0.092592 | 4.748e-06 |    0.0544629  |    0.184438   |    0.815476   |    0.351889   |    0.374233   |
-|  8 | rs7714195   |     5 |  94042893 | T    | A    |  0.42148 | 0.085736 | 8.831e-07 |    0          |    0          |    0          |    0          |    0          |
-|  9 | rs7718956   |     5 |  94043608 | C    | A    |  0.41613 | 0.086076 | 1.335e-06 |    0.464448   |    0.544669   |    0.882937   |    0.389662   |    0.543967   |
-| 10 | rs2662181   |     5 | 174897884 | T    | C    | -0.32506 | 0.073075 | 8.656e-06 |    0.652042   |    0.559078   |    0.315476   |    0.658052   |    0.419223   |
-| 11 | rs2644647   |     5 | 174897933 | C    | T    | -0.32526 | 0.073071 | 8.534e-06 |    0.652042   |    0.559078   |    0.315476   |    0.658052   |    0.419223   |
-| 12 | rs2662183   |     5 | 174898423 | C    | T    | -0.32429 | 0.073129 | 9.227e-06 |    0.652042   |    0.559078   |    0.315476   |    0.658052   |    0.415133   |
-| 13 | rs2960272   |     5 | 174898743 | A    | G    | -0.32437 | 0.07309  | 9.084e-06 |    0.642965   |    0.559078   |    0.329365   |    0.656064   |    0.417178   |
-| 14 | rs2960271   |     5 | 174898854 | A    | C    | -0.32413 | 0.073108 | 9.267e-06 |    0.652042   |    0.559078   |    0.315476   |    0.656064   |    0.415133   |
-| 15 | rs174820    |     5 | 174898980 | C    | A    | -0.32481 | 0.073089 | 8.826e-06 |    0.652042   |    0.559078   |    0.315476   |    0.656064   |    0.415133   |
-| 16 | rs169135    |     5 | 174899023 | C    | T    | -0.32334 | 0.073182 | 9.948e-06 |    0.624811   |    0.556196   |    0.315476   |    0.654076   |    0.415133   |
-| 17 | rs267358    |     5 | 174899177 | T    | C    | -0.32429 | 0.073291 | 9.657e-06 |    0.538578   |    0.550432   |    0.315476   |    0.654076   |    0.417178   |
-| 18 | rs267357    |     5 | 174899335 | G    | A    | -0.32584 | 0.073089 | 8.271e-06 |    0.653555   |    0.559078   |    0.315476   |    0.656064   |    0.415133   |
-| 19 | rs115806935 |     6 |  63912499 | C    | T    |  0.89567 | 0.19659  | 5.212e-06 |    0.00453858 |    0.054755   |    0          |    0.0775348  |    0.0204499  |
-| 20 | rs74982029  |     6 |  63953169 | G    | A    |  0.91012 | 0.19827  | 4.426e-06 |    0.00453858 |    0.0576369  |    0          |    0.0815109  |    0.0204499  |
-| 21 | rs75899089  |     6 | 119125847 | T    | G    |  1.6259  | 0.36289  | 7.451e-06 |    0.00151286 |    0.00864553 |    0.00198413 |    0.0218688  |    0.00408998 |
-| 22 | rs3032088   |     6 | 148205788 | C    | CCTT | -0.35429 | 0.079119 | 7.538e-06 |  nan          |  nan          |  nan          |  nan          |  nan          |
-| 23 | rs671555    |     6 | 148205955 | A    | G    | -0.3247  | 0.071669 | 5.881e-06 |    0.954614   |    0.870317   |    0.880952   |    0.797217   |    0.887526   |
-| 24 | rs33942592  |     8 | 142369211 | AG   | A    |  0.42714 | 0.091919 | 3.368e-06 |  nan          |  nan          |  nan          |  nan          |  nan          |
-| 25 | rs6602902   |    13 | 114578111 | C    | T    |  0.34219 | 0.077139 | 9.164e-06 |    0.860817   |    0.841499   |    0.688492   |    0.900596   |    0.844581   |
-| 26 | rs61985438  |    14 |  54804925 | C    | T    |  0.4108  | 0.09271  | 9.379e-06 |    0.92587    |    0.902017   |    0.886905   |    0.968191   |    0.9591     |
-| 27 | rs1041076   |    14 |  56575879 | A    | G    | -0.41849 | 0.094116 | 8.726e-06 |    0.603631   |    0.54755    |    0.849206   |    0.365805   |    0.750511   |
-| 28 | rs76149365  |    14 |  57014579 | A    | G    |  1.427   | 0.31863  | 7.512e-06 |    0          |    0.00576369 |    0          |    0.0337972  |    0.00204499 |
-| 29 | rs8021697   |    14 |  62959757 | A    | C    |  0.4482  | 0.098858 | 5.793e-06 |    0.369138   |    0.198847   |    0.126984   |    0.274354   |    0.202454   |
-| 30 | rs2859928   |    14 |  62979707 | G    | A    |  0.43805 | 0.0952   | 4.197e-06 |    0.346445   |    0.198847   |    0.125      |    0.270378   |    0.204499   |
-| 31 | rs11623377  |    14 |  62986113 | T    | C    |  0.46088 | 0.096663 | 1.862e-06 |    0.332829   |    0.204611   |    0.125      |    0.272366   |    0.202454   |
-| 32 | rs35850456  |    14 |  62987234 | C    | G    |  0.47979 | 0.10518  | 5.08e-06  |    0          |    0          |    0          |    0          |    0          |
-| 33 | rs34197117  |    14 |  62993142 | C    | T    |  0.46282 | 0.09567  | 1.314e-06 |    0.400908   |    0.210375   |    0.126984   |    0.272366   |    0.204499   |
-| 34 | rs76596888  |    16 |   5454304 | T    | A    |  0.82729 | 0.18062  | 4.645e-06 |    0          |    0          |    0          |    0          |    0          |
-| 35 | rs11863095  |    16 |  25031321 | A    | G    |  0.33542 | 0.075617 | 9.173e-06 |    0.198185   |    0.527378   |    0.771825   |    0.658052   |    0.703476   |
-| 36 | rs7405033   |    16 |  25051047 | A    | G    | -0.38219 | 0.084827 | 6.62e-06  |    0.987897   |    0.919308   |    0.803571   |    0.902584   |    0.883436   |
-| 37 | rs7233400   |    18 |  22884399 | C    | G    |  0.34181 | 0.071611 | 1.814e-06 |    0          |    0          |    0          |    0          |    0          |
-| 38 | rs4550540   |    18 |  22891631 | A    | G    |  0.33524 | 0.071059 | 2.385e-06 |    0.776097   |    0.792507   |    0.634921   |    0.7833     |    0.560327   |
-| 39 | rs12456739  |    18 |  22892107 | A    | G    |  0.33667 | 0.07109  | 2.181e-06 |    0.776097   |    0.792507   |    0.634921   |    0.7833     |    0.560327   |
-| 40 | rs12454512  |    18 |  22892309 | G    | A    |  0.33986 | 0.071812 | 2.217e-06 |    0.98941    |    0.85879    |    0.924603   |    0.801193   |    0.660532   |
-| 41 | rs6508362   |    18 |  22913739 | C    | A    |  0.3495  | 0.073584 | 2.037e-06 |    0.600605   |    0.504323   |    0.390873   |    0.614314   |    0.488753   |
-| 42 | rs2009136   |    18 |  67212286 | A    | G    |  0.46358 | 0.096209 | 1.446e-06 |    0.242057   |    0.530259   |    0.880952   |    0.395626   |    0.607362   |
-| 43 | rs7244255   |    18 |  67214197 | A    | G    |  0.44761 | 0.096462 | 3.479e-06 |    0.195159   |    0.518732   |    0.875      |    0.395626   |    0.533742   |
-| 44 | rs111873256 |    18 |  74576316 | T    | C    | -0.35729 | 0.079802 | 7.562e-06 |    0.15885    |    0.348703   |    0.0515873  |    0.44334    |    0.353783   |
-| 45 | rs55877906  |    22 |  45194632 | T    | C    |  1.4081  | 0.30679  | 4.44e-06  |    0.00151286 |    0.00576369 |    0          |    0.0536779  |    0.00408998 |
-
-</p>
-</details>
-
-<h3 id="analysis-of-ana_b1_v2">Analysis of ANA_B1_V2</h3>
+<p>In all the results below, the <code>A1</code> allele is the risk increasing allele.</p>
+<h2 id="analysis-of-ana_a2_v2">Analysis of ANA_A2_V2</h2>
+<p>(very severe respiratory confirmed covid vs. population)</p>
+<table>
+<thead>
+<tr>
+<th align="right"></th>
+<th align="left">SNP</th>
+<th align="right">CHR</th>
+<th align="right">BP</th>
+<th align="left">A1</th>
+<th align="left">A2</th>
+<th align="right">BETA</th>
+<th align="right">SE</th>
+<th align="right">P</th>
+<th align="right">AFR_A1_FREQ</th>
+<th align="right">AMR_A1_FREQ</th>
+<th align="right">EAS_A1_FREQ</th>
+<th align="right">EUR_A1_FREQ</th>
+<th align="right">SAS_A1_FREQ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">0</td>
+<td align="left">rs6674373</td>
+<td align="right">1</td>
+<td align="right">1233112</td>
+<td align="left">T</td>
+<td align="left">C</td>
+<td align="right">1.5493</td>
+<td align="right">0.34905</td>
+<td align="right">9.056e-06</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+</tr>
+<tr>
+<td align="right">1</td>
+<td align="left">rs150612978</td>
+<td align="right">1</td>
+<td align="right">186250988</td>
+<td align="left">C</td>
+<td align="left">T</td>
+<td align="right">2.7079</td>
+<td align="right">0.59303</td>
+<td align="right">4.967e-06</td>
+<td align="right">0</td>
+<td align="right">0.198847</td>
+<td align="right">0</td>
+<td align="right">0.00596421</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="right">2</td>
+<td align="left">rs597593</td>
+<td align="right">2</td>
+<td align="right">33660211</td>
+<td align="left">G</td>
+<td align="left">A</td>
+<td align="right">0.47857</td>
+<td align="right">0.10563</td>
+<td align="right">5.876e-06</td>
+<td align="right">0.579425</td>
+<td align="right">0.432277</td>
+<td align="right">0.115079</td>
+<td align="right">0.250497</td>
+<td align="right">0.229039</td>
+</tr>
+<tr>
+<td align="right">3</td>
+<td align="left">rs604788</td>
+<td align="right">2</td>
+<td align="right">33664350</td>
+<td align="left">T</td>
+<td align="left">C</td>
+<td align="right">0.48213</td>
+<td align="right">0.10841</td>
+<td align="right">8.697e-06</td>
+<td align="right">0.635401</td>
+<td align="right">0.409222</td>
+<td align="right">0.0992063</td>
+<td align="right">0.262425</td>
+<td align="right">0.224949</td>
+</tr>
+<tr>
+<td align="right">4</td>
+<td align="left">rs71424939</td>
+<td align="right">2</td>
+<td align="right">237819380</td>
+<td align="left">C</td>
+<td align="left">T</td>
+<td align="right">0.3636</td>
+<td align="right">0.081964</td>
+<td align="right">9.161e-06</td>
+<td align="right">0.273828</td>
+<td align="right">0.610951</td>
+<td align="right">0.543651</td>
+<td align="right">0.572565</td>
+<td align="right">0.519427</td>
+</tr>
+<tr>
+<td align="right">5</td>
+<td align="left">rs1396818</td>
+<td align="right">4</td>
+<td align="right">58695149</td>
+<td align="left">C</td>
+<td align="left">T</td>
+<td align="right">0.3992</td>
+<td align="right">0.087297</td>
+<td align="right">4.81e-06</td>
+<td align="right">0.177005</td>
+<td align="right">0.201729</td>
+<td align="right">0.787698</td>
+<td align="right">0.365805</td>
+<td align="right">0.429448</td>
+</tr>
+<tr>
+<td align="right">6</td>
+<td align="left">rs10011661</td>
+<td align="right">4</td>
+<td align="right">58698487</td>
+<td align="left">C</td>
+<td align="left">T</td>
+<td align="right">0.41532</td>
+<td align="right">0.08878</td>
+<td align="right">2.896e-06</td>
+<td align="right">0.143722</td>
+<td align="right">0.213256</td>
+<td align="right">0.78373</td>
+<td align="right">0.363817</td>
+<td align="right">0.406953</td>
+</tr>
+<tr>
+<td align="right">7</td>
+<td align="left">rs3899861</td>
+<td align="right">4</td>
+<td align="right">58699137</td>
+<td align="left">A</td>
+<td align="left">G</td>
+<td align="right">0.42367</td>
+<td align="right">0.092592</td>
+<td align="right">4.748e-06</td>
+<td align="right">0.0544629</td>
+<td align="right">0.184438</td>
+<td align="right">0.815476</td>
+<td align="right">0.351889</td>
+<td align="right">0.374233</td>
+</tr>
+<tr>
+<td align="right">8</td>
+<td align="left">rs7714195</td>
+<td align="right">5</td>
+<td align="right">94042893</td>
+<td align="left">T</td>
+<td align="left">A</td>
+<td align="right">0.42148</td>
+<td align="right">0.085736</td>
+<td align="right">8.831e-07</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="right">9</td>
+<td align="left">rs7718956</td>
+<td align="right">5</td>
+<td align="right">94043608</td>
+<td align="left">C</td>
+<td align="left">A</td>
+<td align="right">0.41613</td>
+<td align="right">0.086076</td>
+<td align="right">1.335e-06</td>
+<td align="right">0.464448</td>
+<td align="right">0.544669</td>
+<td align="right">0.882937</td>
+<td align="right">0.389662</td>
+<td align="right">0.543967</td>
+</tr>
+<tr>
+<td align="right">10</td>
+<td align="left">rs2662181</td>
+<td align="right">5</td>
+<td align="right">174897884</td>
+<td align="left">T</td>
+<td align="left">C</td>
+<td align="right">-0.32506</td>
+<td align="right">0.073075</td>
+<td align="right">8.656e-06</td>
+<td align="right">0.652042</td>
+<td align="right">0.559078</td>
+<td align="right">0.315476</td>
+<td align="right">0.658052</td>
+<td align="right">0.419223</td>
+</tr>
+<tr>
+<td align="right">11</td>
+<td align="left">rs2644647</td>
+<td align="right">5</td>
+<td align="right">174897933</td>
+<td align="left">C</td>
+<td align="left">T</td>
+<td align="right">-0.32526</td>
+<td align="right">0.073071</td>
+<td align="right">8.534e-06</td>
+<td align="right">0.652042</td>
+<td align="right">0.559078</td>
+<td align="right">0.315476</td>
+<td align="right">0.658052</td>
+<td align="right">0.419223</td>
+</tr>
+<tr>
+<td align="right">12</td>
+<td align="left">rs2662183</td>
+<td align="right">5</td>
+<td align="right">174898423</td>
+<td align="left">C</td>
+<td align="left">T</td>
+<td align="right">-0.32429</td>
+<td align="right">0.073129</td>
+<td align="right">9.227e-06</td>
+<td align="right">0.652042</td>
+<td align="right">0.559078</td>
+<td align="right">0.315476</td>
+<td align="right">0.658052</td>
+<td align="right">0.415133</td>
+</tr>
+<tr>
+<td align="right">13</td>
+<td align="left">rs2960272</td>
+<td align="right">5</td>
+<td align="right">174898743</td>
+<td align="left">A</td>
+<td align="left">G</td>
+<td align="right">-0.32437</td>
+<td align="right">0.07309</td>
+<td align="right">9.084e-06</td>
+<td align="right">0.642965</td>
+<td align="right">0.559078</td>
+<td align="right">0.329365</td>
+<td align="right">0.656064</td>
+<td align="right">0.417178</td>
+</tr>
+<tr>
+<td align="right">14</td>
+<td align="left">rs2960271</td>
+<td align="right">5</td>
+<td align="right">174898854</td>
+<td align="left">A</td>
+<td align="left">C</td>
+<td align="right">-0.32413</td>
+<td align="right">0.073108</td>
+<td align="right">9.267e-06</td>
+<td align="right">0.652042</td>
+<td align="right">0.559078</td>
+<td align="right">0.315476</td>
+<td align="right">0.656064</td>
+<td align="right">0.415133</td>
+</tr>
+<tr>
+<td align="right">15</td>
+<td align="left">rs174820</td>
+<td align="right">5</td>
+<td align="right">174898980</td>
+<td align="left">C</td>
+<td align="left">A</td>
+<td align="right">-0.32481</td>
+<td align="right">0.073089</td>
+<td align="right">8.826e-06</td>
+<td align="right">0.652042</td>
+<td align="right">0.559078</td>
+<td align="right">0.315476</td>
+<td align="right">0.656064</td>
+<td align="right">0.415133</td>
+</tr>
+<tr>
+<td align="right">16</td>
+<td align="left">rs169135</td>
+<td align="right">5</td>
+<td align="right">174899023</td>
+<td align="left">C</td>
+<td align="left">T</td>
+<td align="right">-0.32334</td>
+<td align="right">0.073182</td>
+<td align="right">9.948e-06</td>
+<td align="right">0.624811</td>
+<td align="right">0.556196</td>
+<td align="right">0.315476</td>
+<td align="right">0.654076</td>
+<td align="right">0.415133</td>
+</tr>
+<tr>
+<td align="right">17</td>
+<td align="left">rs267358</td>
+<td align="right">5</td>
+<td align="right">174899177</td>
+<td align="left">T</td>
+<td align="left">C</td>
+<td align="right">-0.32429</td>
+<td align="right">0.073291</td>
+<td align="right">9.657e-06</td>
+<td align="right">0.538578</td>
+<td align="right">0.550432</td>
+<td align="right">0.315476</td>
+<td align="right">0.654076</td>
+<td align="right">0.417178</td>
+</tr>
+<tr>
+<td align="right">18</td>
+<td align="left">rs267357</td>
+<td align="right">5</td>
+<td align="right">174899335</td>
+<td align="left">G</td>
+<td align="left">A</td>
+<td align="right">-0.32584</td>
+<td align="right">0.073089</td>
+<td align="right">8.271e-06</td>
+<td align="right">0.653555</td>
+<td align="right">0.559078</td>
+<td align="right">0.315476</td>
+<td align="right">0.656064</td>
+<td align="right">0.415133</td>
+</tr>
+<tr>
+<td align="right">19</td>
+<td align="left">rs115806935</td>
+<td align="right">6</td>
+<td align="right">63912499</td>
+<td align="left">C</td>
+<td align="left">T</td>
+<td align="right">0.89567</td>
+<td align="right">0.19659</td>
+<td align="right">5.212e-06</td>
+<td align="right">0.00453858</td>
+<td align="right">0.054755</td>
+<td align="right">0</td>
+<td align="right">0.0775348</td>
+<td align="right">0.0204499</td>
+</tr>
+<tr>
+<td align="right">20</td>
+<td align="left">rs74982029</td>
+<td align="right">6</td>
+<td align="right">63953169</td>
+<td align="left">G</td>
+<td align="left">A</td>
+<td align="right">0.91012</td>
+<td align="right">0.19827</td>
+<td align="right">4.426e-06</td>
+<td align="right">0.00453858</td>
+<td align="right">0.0576369</td>
+<td align="right">0</td>
+<td align="right">0.0815109</td>
+<td align="right">0.0204499</td>
+</tr>
+<tr>
+<td align="right">21</td>
+<td align="left">rs75899089</td>
+<td align="right">6</td>
+<td align="right">119125847</td>
+<td align="left">T</td>
+<td align="left">G</td>
+<td align="right">1.6259</td>
+<td align="right">0.36289</td>
+<td align="right">7.451e-06</td>
+<td align="right">0.00151286</td>
+<td align="right">0.00864553</td>
+<td align="right">0.00198413</td>
+<td align="right">0.0218688</td>
+<td align="right">0.00408998</td>
+</tr>
+<tr>
+<td align="right">22</td>
+<td align="left">rs3032088</td>
+<td align="right">6</td>
+<td align="right">148205788</td>
+<td align="left">C</td>
+<td align="left">CCTT</td>
+<td align="right">-0.35429</td>
+<td align="right">0.079119</td>
+<td align="right">7.538e-06</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+</tr>
+<tr>
+<td align="right">23</td>
+<td align="left">rs671555</td>
+<td align="right">6</td>
+<td align="right">148205955</td>
+<td align="left">A</td>
+<td align="left">G</td>
+<td align="right">-0.3247</td>
+<td align="right">0.071669</td>
+<td align="right">5.881e-06</td>
+<td align="right">0.954614</td>
+<td align="right">0.870317</td>
+<td align="right">0.880952</td>
+<td align="right">0.797217</td>
+<td align="right">0.887526</td>
+</tr>
+<tr>
+<td align="right">24</td>
+<td align="left">rs33942592</td>
+<td align="right">8</td>
+<td align="right">142369211</td>
+<td align="left">AG</td>
+<td align="left">A</td>
+<td align="right">0.42714</td>
+<td align="right">0.091919</td>
+<td align="right">3.368e-06</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+</tr>
+<tr>
+<td align="right">25</td>
+<td align="left">rs6602902</td>
+<td align="right">13</td>
+<td align="right">114578111</td>
+<td align="left">C</td>
+<td align="left">T</td>
+<td align="right">0.34219</td>
+<td align="right">0.077139</td>
+<td align="right">9.164e-06</td>
+<td align="right">0.860817</td>
+<td align="right">0.841499</td>
+<td align="right">0.688492</td>
+<td align="right">0.900596</td>
+<td align="right">0.844581</td>
+</tr>
+<tr>
+<td align="right">26</td>
+<td align="left">rs61985438</td>
+<td align="right">14</td>
+<td align="right">54804925</td>
+<td align="left">C</td>
+<td align="left">T</td>
+<td align="right">0.4108</td>
+<td align="right">0.09271</td>
+<td align="right">9.379e-06</td>
+<td align="right">0.92587</td>
+<td align="right">0.902017</td>
+<td align="right">0.886905</td>
+<td align="right">0.968191</td>
+<td align="right">0.9591</td>
+</tr>
+<tr>
+<td align="right">27</td>
+<td align="left">rs1041076</td>
+<td align="right">14</td>
+<td align="right">56575879</td>
+<td align="left">A</td>
+<td align="left">G</td>
+<td align="right">-0.41849</td>
+<td align="right">0.094116</td>
+<td align="right">8.726e-06</td>
+<td align="right">0.603631</td>
+<td align="right">0.54755</td>
+<td align="right">0.849206</td>
+<td align="right">0.365805</td>
+<td align="right">0.750511</td>
+</tr>
+<tr>
+<td align="right">28</td>
+<td align="left">rs76149365</td>
+<td align="right">14</td>
+<td align="right">57014579</td>
+<td align="left">A</td>
+<td align="left">G</td>
+<td align="right">1.427</td>
+<td align="right">0.31863</td>
+<td align="right">7.512e-06</td>
+<td align="right">0</td>
+<td align="right">0.00576369</td>
+<td align="right">0</td>
+<td align="right">0.0337972</td>
+<td align="right">0.00204499</td>
+</tr>
+<tr>
+<td align="right">29</td>
+<td align="left">rs8021697</td>
+<td align="right">14</td>
+<td align="right">62959757</td>
+<td align="left">A</td>
+<td align="left">C</td>
+<td align="right">0.4482</td>
+<td align="right">0.098858</td>
+<td align="right">5.793e-06</td>
+<td align="right">0.369138</td>
+<td align="right">0.198847</td>
+<td align="right">0.126984</td>
+<td align="right">0.274354</td>
+<td align="right">0.202454</td>
+</tr>
+<tr>
+<td align="right">30</td>
+<td align="left">rs2859928</td>
+<td align="right">14</td>
+<td align="right">62979707</td>
+<td align="left">G</td>
+<td align="left">A</td>
+<td align="right">0.43805</td>
+<td align="right">0.0952</td>
+<td align="right">4.197e-06</td>
+<td align="right">0.346445</td>
+<td align="right">0.198847</td>
+<td align="right">0.125</td>
+<td align="right">0.270378</td>
+<td align="right">0.204499</td>
+</tr>
+<tr>
+<td align="right">31</td>
+<td align="left">rs11623377</td>
+<td align="right">14</td>
+<td align="right">62986113</td>
+<td align="left">T</td>
+<td align="left">C</td>
+<td align="right">0.46088</td>
+<td align="right">0.096663</td>
+<td align="right">1.862e-06</td>
+<td align="right">0.332829</td>
+<td align="right">0.204611</td>
+<td align="right">0.125</td>
+<td align="right">0.272366</td>
+<td align="right">0.202454</td>
+</tr>
+<tr>
+<td align="right">32</td>
+<td align="left">rs35850456</td>
+<td align="right">14</td>
+<td align="right">62987234</td>
+<td align="left">C</td>
+<td align="left">G</td>
+<td align="right">0.47979</td>
+<td align="right">0.10518</td>
+<td align="right">5.08e-06</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="right">33</td>
+<td align="left">rs34197117</td>
+<td align="right">14</td>
+<td align="right">62993142</td>
+<td align="left">C</td>
+<td align="left">T</td>
+<td align="right">0.46282</td>
+<td align="right">0.09567</td>
+<td align="right">1.314e-06</td>
+<td align="right">0.400908</td>
+<td align="right">0.210375</td>
+<td align="right">0.126984</td>
+<td align="right">0.272366</td>
+<td align="right">0.204499</td>
+</tr>
+<tr>
+<td align="right">34</td>
+<td align="left">rs76596888</td>
+<td align="right">16</td>
+<td align="right">5454304</td>
+<td align="left">T</td>
+<td align="left">A</td>
+<td align="right">0.82729</td>
+<td align="right">0.18062</td>
+<td align="right">4.645e-06</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="right">35</td>
+<td align="left">rs11863095</td>
+<td align="right">16</td>
+<td align="right">25031321</td>
+<td align="left">A</td>
+<td align="left">G</td>
+<td align="right">0.33542</td>
+<td align="right">0.075617</td>
+<td align="right">9.173e-06</td>
+<td align="right">0.198185</td>
+<td align="right">0.527378</td>
+<td align="right">0.771825</td>
+<td align="right">0.658052</td>
+<td align="right">0.703476</td>
+</tr>
+<tr>
+<td align="right">36</td>
+<td align="left">rs7405033</td>
+<td align="right">16</td>
+<td align="right">25051047</td>
+<td align="left">A</td>
+<td align="left">G</td>
+<td align="right">-0.38219</td>
+<td align="right">0.084827</td>
+<td align="right">6.62e-06</td>
+<td align="right">0.987897</td>
+<td align="right">0.919308</td>
+<td align="right">0.803571</td>
+<td align="right">0.902584</td>
+<td align="right">0.883436</td>
+</tr>
+<tr>
+<td align="right">37</td>
+<td align="left">rs7233400</td>
+<td align="right">18</td>
+<td align="right">22884399</td>
+<td align="left">C</td>
+<td align="left">G</td>
+<td align="right">0.34181</td>
+<td align="right">0.071611</td>
+<td align="right">1.814e-06</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="right">38</td>
+<td align="left">rs4550540</td>
+<td align="right">18</td>
+<td align="right">22891631</td>
+<td align="left">A</td>
+<td align="left">G</td>
+<td align="right">0.33524</td>
+<td align="right">0.071059</td>
+<td align="right">2.385e-06</td>
+<td align="right">0.776097</td>
+<td align="right">0.792507</td>
+<td align="right">0.634921</td>
+<td align="right">0.7833</td>
+<td align="right">0.560327</td>
+</tr>
+<tr>
+<td align="right">39</td>
+<td align="left">rs12456739</td>
+<td align="right">18</td>
+<td align="right">22892107</td>
+<td align="left">A</td>
+<td align="left">G</td>
+<td align="right">0.33667</td>
+<td align="right">0.07109</td>
+<td align="right">2.181e-06</td>
+<td align="right">0.776097</td>
+<td align="right">0.792507</td>
+<td align="right">0.634921</td>
+<td align="right">0.7833</td>
+<td align="right">0.560327</td>
+</tr>
+<tr>
+<td align="right">40</td>
+<td align="left">rs12454512</td>
+<td align="right">18</td>
+<td align="right">22892309</td>
+<td align="left">G</td>
+<td align="left">A</td>
+<td align="right">0.33986</td>
+<td align="right">0.071812</td>
+<td align="right">2.217e-06</td>
+<td align="right">0.98941</td>
+<td align="right">0.85879</td>
+<td align="right">0.924603</td>
+<td align="right">0.801193</td>
+<td align="right">0.660532</td>
+</tr>
+<tr>
+<td align="right">41</td>
+<td align="left">rs6508362</td>
+<td align="right">18</td>
+<td align="right">22913739</td>
+<td align="left">C</td>
+<td align="left">A</td>
+<td align="right">0.3495</td>
+<td align="right">0.073584</td>
+<td align="right">2.037e-06</td>
+<td align="right">0.600605</td>
+<td align="right">0.504323</td>
+<td align="right">0.390873</td>
+<td align="right">0.614314</td>
+<td align="right">0.488753</td>
+</tr>
+<tr>
+<td align="right">42</td>
+<td align="left">rs2009136</td>
+<td align="right">18</td>
+<td align="right">67212286</td>
+<td align="left">A</td>
+<td align="left">G</td>
+<td align="right">0.46358</td>
+<td align="right">0.096209</td>
+<td align="right">1.446e-06</td>
+<td align="right">0.242057</td>
+<td align="right">0.530259</td>
+<td align="right">0.880952</td>
+<td align="right">0.395626</td>
+<td align="right">0.607362</td>
+</tr>
+<tr>
+<td align="right">43</td>
+<td align="left">rs7244255</td>
+<td align="right">18</td>
+<td align="right">67214197</td>
+<td align="left">A</td>
+<td align="left">G</td>
+<td align="right">0.44761</td>
+<td align="right">0.096462</td>
+<td align="right">3.479e-06</td>
+<td align="right">0.195159</td>
+<td align="right">0.518732</td>
+<td align="right">0.875</td>
+<td align="right">0.395626</td>
+<td align="right">0.533742</td>
+</tr>
+<tr>
+<td align="right">44</td>
+<td align="left">rs111873256</td>
+<td align="right">18</td>
+<td align="right">74576316</td>
+<td align="left">T</td>
+<td align="left">C</td>
+<td align="right">-0.35729</td>
+<td align="right">0.079802</td>
+<td align="right">7.562e-06</td>
+<td align="right">0.15885</td>
+<td align="right">0.348703</td>
+<td align="right">0.0515873</td>
+<td align="right">0.44334</td>
+<td align="right">0.353783</td>
+</tr>
+<tr>
+<td align="right">45</td>
+<td align="left">rs55877906</td>
+<td align="right">22</td>
+<td align="right">45194632</td>
+<td align="left">T</td>
+<td align="left">C</td>
+<td align="right">1.4081</td>
+<td align="right">0.30679</td>
+<td align="right">4.44e-06</td>
+<td align="right">0.00151286</td>
+<td align="right">0.00576369</td>
+<td align="right">0</td>
+<td align="right">0.0536779</td>
+<td align="right">0.00408998</td>
+</tr>
+</tbody>
+</table>
+<h2 id="analysis-of-ana_b1_v2">Analysis of ANA_B1_V2</h2>
 <p>(hospitalized covid vs. not hospitalized covid)</p>
-<h3 id="analysis-of-ana_b2_v2">Analysis of ANA_B2_V2</h3>
+<h2 id="analysis-of-ana_b2_v2">Analysis of ANA_B2_V2</h2>
 <p>(hospitalized covid vs. population)</p>
-<h3 id="analysis-of-ana_c1_v2">Analysis of ANA_C1_V2</h3>
+<h2 id="analysis-of-ana_c1_v2">Analysis of ANA_C1_V2</h2>
 <p>(covid vs. lab/self-reported negative)</p>
-<h3 id="analysis-of-ana_c2_v2">Analysis of ANA_C2_V2</h3>
+<h2 id="analysis-of-ana_c2_v2">Analysis of ANA_C2_V2</h2>
 <p>(covid vs. population)</p>
-<h3 id="analysis-of-ana_d1_v2">Analysis of ANA_D1_V2</h3>
+<h2 id="analysis-of-ana_d1_v2">Analysis of ANA_D1_V2</h2>
 <p>(predicted covid from self-reported symptoms vs. predicted or self-reported non-covid)</p>
 <h2 id="methods">Methods</h2>
 <p>I downloaded 6 versions of COVID-19 GWAS summary statistics data from
