@@ -99,8 +99,8 @@ for idx in range(nsnp):
 sumstats.drop(drop_idx, inplace=True)
 
 # get sample size
-tot_ncase = 3199.0
-tot_nctrl = 897488.0
+tot_ncase = float(sys.argv[3])
+tot_nctrl = float(sys.argv[4])
 tot_n = 4.0 / (1.0/tot_ncase + 1.0/tot_nctrl)
 
 sumstats['N'] = tot_n
@@ -109,4 +109,4 @@ sumstats['N'] = tot_n
 sumstats = sumstats[['SNP_y', 'CHR', 'BP', 'ALT', 'REF', 'Z', 'N',
                      'all_inv_var_meta_beta', 'all_inv_var_meta_sebeta']]
 sumstats.columns = ['SNP', 'CHR', 'BP', 'A1', 'A2', 'Z', 'N', 'BETA', 'SE']
-sumstats.to_csv(sys.argv[3], sep='\t', index=False)
+sumstats.to_csv(sys.argv[5], sep='\t', index=False)
