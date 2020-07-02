@@ -38,7 +38,6 @@ valid_letters = set(['A', 'C', 'G', 'T'])
 def main():
 
     all_pop = ['AFR', 'AMR', 'EAS', 'EUR', 'SAS']
-    all_pop = ['AFR', 'AMR']
 
     # get command line argument and initialize log
     args = get_command_line()
@@ -47,8 +46,7 @@ def main():
     argmap = check_command_line(args)
 
     # load gwas sumstat
-    sumstat = pd.read_table(argmap['sumstat'],
-        delim_whitespace=True, nrows=100000)
+    sumstat = pd.read_table(argmap['sumstat'], delim_whitespace=True)
     sumstat.drop(['SNP'], axis=1, inplace=True)
     sumstat.rename(columns={'#CHR':'CHR', 'POS':'BP', 'REF':'A2', 'ALT':'A1',
         'rsid':'SNP'}, inplace=True)
@@ -87,6 +85,8 @@ def main():
         ss_a1a2 = (sumstat_tmp['A1_x'] + sumstat_tmp['A2_x']).values
         ref_a1a2 = (sumstat_tmp['A1_y'] + sumstat_tmp['A2_y']).values
         for i in range(nsnp):
+            if ref_a1a2[i] in ambiguous:
+                continue
             if ss_a1a2[i] in equiv[ref_a1a2[i]]:
                 freq[i] = (homa1[i] + het[i]) / tot[i]
             elif ss_a1a2[i] in reverse[ref_a1a2[i]]:
