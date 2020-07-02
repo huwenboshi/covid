@@ -122,6 +122,8 @@ def main():
 
     # get final output
     sumstat = sumstat[out_cols]
+    sumstat = sumstat[sumstat['SNP'].notna()]
+    sumstat.reset_index(drop=True, inplace=True)
     print(sumstat.to_markdown())
 
 # check command line
