@@ -46,13 +46,20 @@ def main():
     argmap = check_command_line(args)
 
     # load gwas sumstat
-    sumstat = pd.read_table(argmap['sumstat'], delim_whitespace=True)
-    sumstat.drop(['SNP'], axis=1, inplace=True)
+    use_cols = ['#CHR', 'POS', 'REF', 'ALT', 'rsid',
+        'all_inv_var_meta_beta', 'all_inv_var_meta_sebeta',
+        'all_inv_var_meta_p']
+    sumstat = pd.read_table(argmap['sumstat'], delim_whitespace=True,
+        usecols=use_cols)
     sumstat.rename(columns={'#CHR':'CHR', 'POS':'BP', 'REF':'A2', 'ALT':'A1',
-        'rsid':'SNP'}, inplace=True)
+        'rsid':'SNP', 'all_inv_var_meta_beta':'BETA',
+        'all_inv_var_meta_sebeta':'SE', 'all_inv_var_meta_p':'P'},
+        inplace=True)
 
     # find significant hit
-    sumstat = sumstat[sumstat['all_inv_var_meta_p']<argmap['thres']]
+    sumstat = sumstat[sumstat['P']<argmap['thres']]
+    sumstat.reset_index(drop=True, inplace=True)
+    sumstat = sumstat[['SNP', 'CHR', 'BP', 'A1', 'A2', 'BETA', 'SE', 'P']]
 
     # get all relevant chromosomes
     all_chrom = pd.unique(sumstat['CHR'])
@@ -98,36 +105,24 @@ def main():
         sumstat_tmp['{}_A1_FREQ'.format(pop)] = freq
        
         # select columns to output
-        sumstat_tmp = sumstat_tmp[['SNP', 'CHR_x', 'BP', 'A1_x', 'A2_x',
-            'all_inv_var_meta_beta', 'all_inv_var_meta_sebeta',
-            'all_inv_var_meta_p', '{}_A1_FREQ'.format(pop)]]
-        sumstat_tmp.rename(columns={'CHR_x':'CHR', 'A1_x':'A1', 'A2_x':'A2'},
-            inplace=True)
+        sumstat_tmp = sumstat_tmp[['SNP', '{}_A1_FREQ'.format(pop)]]
 
         # update pop sumstat
         pop_sumstat[pop] = sumstat_tmp
 
     # create output
-    sumstat_out = pop_sumstat[all_pop[0]]
-    for i in range(1, len(all_pop)):
-        sumstat_out = sumstat_out.merge(pop_sumstat[all_pop[i]],
+    for i in range(0, len(all_pop)):
+        sumstat = sumstat.merge(pop_sumstat[all_pop[i]],
             how='outer', on=['SNP'])
 
     # output columns
-    out_cols = ['SNP', 'CHR_x', 'BP_x', 'A1_x', 'A2_x',
-        'all_inv_var_meta_beta_x', 'all_inv_var_meta_sebeta_x',
-        'all_inv_var_meta_p_x']
+    out_cols = ['SNP', 'CHR', 'BP', 'A1', 'A2', 'BETA', 'SE', 'P']
     for pop in all_pop:
         out_cols.append('{}_A1_FREQ'.format(pop))
 
     # get final output
-    sumstat_out = sumstat_out[out_cols]
-    sumstat_out.rename(columns={'CHR_x':'CHR', 'BP_x':'BP', 'A1_x':'A1',
-        'A2_x':'A2', 'all_inv_var_meta_beta_x':'BETA',
-        'all_inv_var_meta_sebeta_x':'SE', 'all_inv_var_meta_p_x':'P'},
-        inplace=True)
-    print(sumstat_out.to_markdown())
-
+    sumstat = sumstat[out_cols]
+    print(sumstat.to_markdown())
 
 # check command line
 def check_command_line(args):

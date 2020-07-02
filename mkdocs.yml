@@ -47,3 +47,6 @@ markdown_extensions:
 extra_javascript:
   - https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML
   - assets/mathjaxhelper.js
+
+extra_css:
+  - 'css/table.css'

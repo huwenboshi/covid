@@ -20,6 +20,13 @@ Here, the `A1` allele is the risk increasing allele.
 ### Analysis of ANA_B2_V2
 (hospitalized covid vs. population)
 
+<div class="table-wrapper" markdown="block">
+
+
+
+</div>
+
+
 ### Analysis of ANA_C1_V2
 (covid vs. lab/self-reported negative)
 
