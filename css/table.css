@@ -1,4 +1,7 @@
-.table-wrapper {
-  overflow-x: scroll;
-  overflow-y: scroll;
+.contents table {
+  width:90%;
+  overflow-x:auto;
+  display:block;
+  white-space:nowrap;
+  font-size:small;
 }
