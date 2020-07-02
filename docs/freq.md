@@ -1,10 +1,11 @@
-# Trans-ethnic analysis of significant COVID-19 GWAS associations
+# Allele frequencies of SNPs significantly associated with COVID-19
 
 ## Summary
-Here, I look at the allele frequencies of the genetic variants potentially
+Here, I look at the allele frequencies of the genetic variants significantly
 associated (\\( p < 5 \times 10^{-8}\\) ) with COVID-19 in diverse populations,
-to assess the likelihood that the same genetic associations can be
-reproduced in different populations.
+to assess the potential of replicability of the association in different
+populations. Please note that additional allele frequency information is
+also available in the published GWAS summary statistics data files.
 
 ## Results
 
