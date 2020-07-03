@@ -108,6 +108,7 @@ sumstats['N'] = tot_n
 
 # save to file
 sumstats = sumstats[['SNP_y', 'CHR', 'BP', 'ALT', 'REF', 'Z', 'N',
-                     'all_inv_var_meta_beta', 'all_inv_var_meta_sebeta']]
-sumstats.columns = ['SNP', 'CHR', 'BP', 'A1', 'A2', 'Z', 'N', 'BETA', 'SE']
+                     'all_inv_var_meta_beta', 'all_inv_var_meta_sebeta',
+                     'P']]
+sumstats.columns = ['SNP','CHR','BP','A1','A2','Z','N','BETA','SE','P']
 sumstats.to_csv(sys.argv[5], sep='\t', index=False)
