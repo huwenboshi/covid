@@ -17,6 +17,7 @@ theme: 'mkdocs'
 pages:
     - Home: 'index.md'
     - Allele frequency: 'freq.md'
+    - Local analysis: 'local.md'
 
 # Options
 extra:

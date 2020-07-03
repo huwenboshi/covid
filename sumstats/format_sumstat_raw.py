@@ -41,7 +41,8 @@ legend.reset_index(drop=True, inplace=True)
 # load sumstats
 sumstats_fnm = sys.argv[2]
 sumstats = pd.read_csv(sumstats_fnm, delim_whitespace=True)
-sumstats.rename(columns={'#CHR': 'CHR', 'POS': 'BP'}, inplace=True)
+sumstats.rename(columns={'#CHR':'CHR', 'POS':'BP', 'all_inv_var_meta_p':'P'},
+    inplace=True)
 
 # get z-score
 sumstats['Z'] = sumstats['all_inv_var_meta_beta'] / sumstats['all_inv_var_meta_sebeta']

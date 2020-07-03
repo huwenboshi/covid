@@ -4,19 +4,19 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Analysis of COVID-19 GWAS summary association statistics data">
+        
         <meta name="author" content="Huwenbo Shi">
-        <link rel="canonical" href="https://huwenboshi.github.io/covid/">
-        <link rel="shortcut icon" href="img/favicon.ico">
-        <title>COVID</title>
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/font-awesome.min.css" rel="stylesheet">
-        <link href="css/base.css" rel="stylesheet">
+        <link rel="canonical" href="https://huwenboshi.github.io/covid/local/">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Local analysis - COVID</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-        <link href="css/table.css" rel="stylesheet">
+        <link href="../css/table.css" rel="stylesheet">
 
-        <script src="js/jquery-1.10.2.min.js" defer></script>
-        <script src="js/bootstrap.min.js" defer></script>
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script>
         <script>
@@ -30,10 +30,10 @@
         </script> 
     </head>
 
-    <body class="homepage">
+    <body>
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href=".">COVID</a>
+                <a class="navbar-brand" href="..">COVID</a>
                 <!-- Expander button -->
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
                     <span class="navbar-toggler-icon"></span>
@@ -43,14 +43,14 @@
                 <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../freq/" class="nav-link">Allele frequency</a>
+                            </li>
                             <li class="navitem active">
-                                <a href="." class="nav-link">Home</a>
-                            </li>
-                            <li class="navitem">
-                                <a href="freq/" class="nav-link">Allele frequency</a>
-                            </li>
-                            <li class="navitem">
-                                <a href="local/" class="nav-link">Local analysis</a>
+                                <a href="./" class="nav-link">Local analysis</a>
                             </li>
                         </ul>
 
@@ -61,12 +61,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" class="nav-link disabled">
+                                <a rel="prev" href="../freq/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="freq/" class="nav-link">
+                                <a rel="next" class="nav-link disabled">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -87,46 +87,12 @@
     
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
-            
-            <li class="nav-item" data-level="1"><a href="#analysis-of-covid-19-gwas-summary-statistics-data" class="nav-link">Analysis of COVID-19 GWAS summary statistics data</a>
-              <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#summary" class="nav-link">Summary</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#code" class="nav-link">Code</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#contact" class="nav-link">Contact</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-              </ul>
-            </li>
         </ul>
     </div>
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="analysis-of-covid-19-gwas-summary-statistics-data">Analysis of COVID-19 GWAS summary statistics data</h1>
-<h2 id="summary">Summary</h2>
-<p>This webpage will serve as a platform to post my analysis of COVID-19 GWAS
-summary statistics data. I will work on the analyses part time, and plan to
-update this webpage regularly.</p>
-<p>The analyses I have in mind include:</p>
-<ul>
-<li>Basic analysis of the GWAS summary statistics data</li>
-<li>Genome-wide and local heritability and genetic correlation</li>
-<li>Trans-ethnic analysis assessing replicability of the potential associations</li>
-</ul>
-<h2 id="code">Code</h2>
-<p>I will post the code I used to perform the analysis on my
-<a href="https://github.com/huwenboshi/covid">GitHub page</a>.</p>
-<h2 id="contact">Contact</h2>
-<ul>
-<li><strong>Huwenbo Shi</strong>: hshi_AT_hsph.harvard.edu</li>
-</ul></div>
+</div>
             </div>
         </div>
 
@@ -136,13 +102,13 @@ update this webpage regularly.</p>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
-            var base_url = ".",
+            var base_url = "..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="js/base.js" defer></script>
+        <script src="../js/base.js" defer></script>
         <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" defer></script>
-        <script src="assets/mathjaxhelper.js" defer></script>
-        <script src="search/main.js" defer></script>
+        <script src="../assets/mathjaxhelper.js" defer></script>
+        <script src="../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -210,8 +176,3 @@ update this webpage regularly.</p>
 
     </body>
 </html>
-
-<!--
-MkDocs version : 1.1.2
-Build Date UTC : 2020-07-03 12:47:06.621052+00:00
--->

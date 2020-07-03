@@ -93,7 +93,7 @@ def main():
         ref_a1a2 = (sumstat_tmp['A1_y'] + sumstat_tmp['A2_y']).values
         for i in range(nsnp):
             if ref_a1a2[i] in ambiguous:
-                continue
+                freq[i] = np.nan
             if ss_a1a2[i] in equiv[ref_a1a2[i]]:
                 freq[i] = (homa1[i] + het[i]) / tot[i]
             elif ss_a1a2[i] in reverse[ref_a1a2[i]]:

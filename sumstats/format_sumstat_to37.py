@@ -88,6 +88,6 @@ for idx in range(nsnp):
 sumstats.drop(drop_idx, inplace=True)
 
 # save to file
-sumstats = sumstats[['SNP', 'CHR_y', 'BP_ref', 'A1', 'A2', 'Z', 'N', 'BETA', 'SE']]
-sumstats.columns = ['SNP', 'CHR', 'BP', 'A1', 'A2', 'Z', 'N', 'BETA', 'SE']
+sumstats = sumstats[['SNP', 'CHR_y', 'BP_ref', 'A1', 'A2', 'Z', 'N', 'BETA', 'SE', 'P']]
+sumstats.columns = ['SNP', 'CHR', 'BP', 'A1', 'A2', 'Z', 'N', 'BETA', 'SE', 'P']
 sumstats.to_csv(sys.argv[3], sep='\t', index=False)
