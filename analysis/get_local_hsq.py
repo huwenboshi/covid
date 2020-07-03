@@ -71,8 +71,6 @@ def main():
         # append to output
         out.append([chrom, start, stop, hsq, hsq_se])
 
-        break
-
     # write to output
     out = pd.DataFrame(out)
     out.columns = ['CHR', 'START', 'STOP', 'HSQ', 'HSQ_SE']
