@@ -30,6 +30,9 @@ def main():
 
     # load sumstat
     sumstat = pd.read_table(args.sumstat)
+    sumstat.drop_duplicates('SNP', keep=False, inplace=True)
+    sumstat.drop_duplicates('BP', keep=False, inplace=True)
+    sumstat.reset_index(drop=True, inplace=True)
 
     # iterate through regions
     out = []
@@ -67,7 +70,10 @@ def main():
         # estimate local hsq
         ld = np.corrcoef(geno)
         hsq, hsq_se = estimate_localhsq(ld, beta_region, nsample)
-        
+       
+        # print out result
+        print(chrom, start, stop, hsq, hsq_se)
+
         # append to output
         out.append([chrom, start, stop, hsq, hsq_se])
 
@@ -99,7 +105,7 @@ def load_legend(frqfile_fnm, start_chrom, stop_chrom):
     return all_leg
 
 # estimate local hsq
-def estimate_localhsq(ld, beta, nsample, k=50):
+def estimate_localhsq(ld, beta, n, k=50):
   
     # get initial estimate
     ld_w, ld_v = eig_decomp(ld)
@@ -108,8 +114,8 @@ def estimate_localhsq(ld, beta, nsample, k=50):
         hsq += 1/ld_w[i] * np.square(np.dot(ld_v[:,i], beta))
 
     # correct for bias
-    hsq = (nsample * hsq - k) / (nsample - k)
-    hsq_var = 4/np.square(nsample-k)*hsq + 2*k/np.square(nsample-k)
+    hsq = (n*hsq - k) / (n - k)
+    hsq_var = np.square(n/(n-k))*(2*k*(1-hsq)/n+4*hsq)*(1-hsq)/n
     hsq_se = np.sqrt(hsq_var)
     
     return hsq, hsq_se
