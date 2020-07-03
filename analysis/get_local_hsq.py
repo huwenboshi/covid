@@ -105,13 +105,18 @@ def load_legend(frqfile_fnm, start_chrom, stop_chrom):
     return all_leg
 
 # estimate local hsq
-def estimate_localhsq(ld, beta, n, k=50):
+def estimate_localhsq(ld, beta, n):
   
     # get initial estimate
+    nsnp = ld.shape[0]
     ld_w, ld_v = eig_decomp(ld)
     hsq = 0.0
-    for i in range(k):
+    k = 0
+    for i in range(nsnp):
+        if ld_w[i] < 1.0:
+            break
         hsq += 1/ld_w[i] * np.square(np.dot(ld_v[:,i], beta))
+        k += 1
 
     # correct for bias
     hsq = (n*hsq - k) / (n - k)
