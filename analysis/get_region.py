@@ -11,7 +11,7 @@ out_fnm = sys.argv[2]
 
 sumstats1 = pd.read_csv(sumstats1_fnm, delim_whitespace=True)
 
-signif1_bp = sumstats1[sumstats1['P'] < gwas_thres][['SNP', 'CHR', 'BP']]
+signif1_bp = sumstats1[sumstats1['P'] < thres][['SNP', 'CHR', 'BP']]
 
 shared_snp = signif1_bp['SNP']
 shared_bp = signif1_bp[signif1_bp['SNP'].isin(shared_snp)][['CHR', 'BP']]
