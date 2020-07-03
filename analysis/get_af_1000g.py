@@ -81,10 +81,10 @@ def main():
         
         # concatenate across chromosomes
         sumstat_tmp = pd.concat(sumstat_chrom, ignore_index=True)
-        homa1 = sumstat_tmp['C(HOM A2)'] # plink encoding is reversed
+        homa1 = 2.0*sumstat_tmp['C(HOM A2)'] # plink encoding is reversed
         het = sumstat_tmp['C(HET)']
-        homa2 = sumstat_tmp['C(HOM A1)'] # plink encoding is reversed
-        tot = homa1 + het + homa2
+        homa2 = 2.0*sumstat_tmp['C(HOM A1)'] # plink encoding is reversed
+        tot = 2.0*(homa1 + het + homa2)
 
         # get frequency of the effect allele
         nsnp = sumstat_tmp.shape[0]

@@ -1,7 +1,7 @@
-.contents table {
-  width:90%;
-  overflow-x:auto;
-  display:block;
-  white-space:nowrap;
-  font-size:small;
+th, td {
+  font-size: 12px;
+}
+
+.table {
+  overflow-x: scroll;
 }
